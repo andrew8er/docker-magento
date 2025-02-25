@@ -83,6 +83,9 @@ services:
       ## Uncomment to increase the virtual memory map count
       #- "max_map_count=262144"
 
+      # https://github.com/markshust/docker-magento/issues/1275
+      - "_JAVA_OPTIONS=-XX:UseSVE=0"
+
   ## If you wish to use Elasticsearch, comment out opensearch image above and
   ## uncomment this block. Do the same in the composer.healthcheck.yaml file.
   # Additionally, if you are performing the manual setup, you will need to
